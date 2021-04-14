@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clase I</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
@@ -24,13 +23,11 @@
 </ul>
 </li>
 </ul>
-
-    </div>
-  </div>
+</div>
+</div>
   <div class="stackedit__right">
     <div class="stackedit__html">
-      <h1 align="center">TDL - Clase I
-</h1><p>Objetivo:</p>
+      <h1 align="center">TDL - Clase I</h1><p>Objetivo:</p>
 <ul>
 <li>Entender a la programación como conceptos</li>
 <li>Entender a los lenguajes por los conceptos que tienen</li>
