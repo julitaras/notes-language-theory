@@ -166,6 +166,7 @@ tree(key:I value:Y left:LT right:RT)
 ```
 
 `Etiqueta (label)` --> `tree`
+
 `Caracteristica (features)` --> `key, value, left, rigth`
 
 ```oz
@@ -190,8 +191,11 @@ end
 ```
 
 **arity** --> Lista de features que tiene el record. En este caso `[apellido edad nombre]`
+
 **width** --> Cantidad de cosas que tiene. En este caso `3`
+
 **label** --> Nombre de el record. En este caso `persona`
+
 
 ## Tuplas
 - Es un record cuyos features son numericos comenzando por el 1.
