@@ -47,6 +47,10 @@ Tarea para el hogar:
 {Browse 'Hello world!'}
 ```
 
+> Ejecuto el buffer haciendo feed.
+> Oz --> Feed buffer
+> Shortcut --> control (^) + `.` + `b`
+
 ### Variables
 - Variables de simple asignacion, no mutan
 - Una variable no es mas que un nombre de algo, representa el nombre de un valor
