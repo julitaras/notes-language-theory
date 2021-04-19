@@ -1,5 +1,7 @@
 <h1 align="center">TDL - Clase I</h3>
 
+## [Clase grabada](https://drive.google.com/file/d/1jpKg5FeMaOHDi2LlISByVO6N5mLi4K-1/view)
+
 Objetivo:
 - Entender a la programación como conceptos
 - Entender a los lenguajes por los conceptos que tienen
@@ -160,8 +162,11 @@ Las funciones devuelven a ultima expresion.
 - Estructura de datos para agrupar referencias
 
 ```oz
-tree(key: I value: left:LT right:RT)
+tree(key:I value:Y left:LT right:RT)
 ```
+
+`Etiqueta (label)` --> `tree`
+`Caracteristica (features)` --> `key, value, left, rigth`
 
 ```oz
 local Arbol in
@@ -178,11 +183,15 @@ local Alumno E in
 	Alumno = persona(nombre: 'Nombre' apellido: 'Apellido' edad: E)
 	
 	{Browse Alumno}
+	{Browse {Label Alumno}}
+	{Browse {Width Alumno}}
+	{Browse {Arity Alumno}}
 end
 ```
-**arity** -->lista de features que tiene el record
-width -->
-label  ---> Nombre de el record
+
+**arity** --> Lista de features que tiene el record. En este caso `[apellido edad nombre]`
+**width** --> Cantidad de cosas que tiene. En este caso `3`
+**label** --> Nombre de el record. En este caso `persona`
 
 ## Tuplas
 - Es un record cuyos features son numericos comenzando por el 1.
@@ -195,6 +204,8 @@ local Alumno E in
 end
 ```
 
+En caso de pedirle a la tupla los features va a decir que es `[1 2 3]`
+
 ## Binding
 - Asignale un valor a una variable
 
@@ -202,6 +213,7 @@ end
 - Una tupla de dos elementos
 - El primer elemento es el primer
 - El segundo elemento es el resto de la cola
+
 ```oz
 local L1 L2 in
 	L1 = [1 2 3 4 5 6]
@@ -218,10 +230,31 @@ end
 ```
 
 ## Pattern Matching
-Trata de matchear un record por el label, features 
+- Trata de matchear un record por el with, label y features.
+- Es una manera de acceder a los campos de una estructura de datos y obtener los valores.
 
+Ejemplo:
 ```oz
-local L1 L2 in
-	EdadAlumno
+local Alumno E EdadAlumno in
+	EdadAlumno = fun {$ Alumno}
+		case Alumno of
+			persona(nombre: N apellido: A edad: E) then
+			E
+		else
+			0
+		end
+	end
+
+	Alumno = persona(nombre:'Roberto' apellido:'Apellido' edad : E)
+	Alumno.edad = 78
+	{Browse Alumno}
+
+	{Browse {EdadAlumno Alumno}}
 end
 ```
+> EdadAlumno se encarga de devolver la edad del alumno en caso de que matchee el record. Es decir, en caso de que contenga esos mismos
+
+# Ejercicios
+
+1. Devolver el maximo de la lista de enteros
+2. A partir de una lista de numeros devolver una lista de los valores absolutos
